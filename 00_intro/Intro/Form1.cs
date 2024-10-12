@@ -17,7 +17,7 @@ namespace Intro
 
             this.Controls.Add(btn);
 
-         
+
         }
 
         private void Btn_Click(object? sender, EventArgs e)
@@ -28,6 +28,27 @@ namespace Intro
             //}
 
             MessageBox.Show("Hello from nandler");
+        }
+
+        private void BtnClick(object sender, EventArgs e)
+        {
+            if (sender is Button btn) 
+            {
+                string tag = (string)btn.Tag;
+
+                switch(tag)
+                {
+                    case "one":
+                        MessageBox.Show("ONE");
+                        break;
+                    case "two":
+                        MessageBox.Show("TWO");
+                        break;
+                    case "three":
+                        MessageBox.Show("THREE");
+                        break;
+                }
+            }
         }
     }
 }
