@@ -20,15 +20,16 @@ namespace _03_lists
             users = new List<User>()
             {
                 new User() {Id = 101, Name = "Chack", Email = "chack@mail.com" },
-                new User() {Id = 102, Name = "Vasia", Email = "vasia@mail.com" },
-                new User() {Id = 104, Name = "Petya", Email = "petya@mail.com" },
-                new User() {Id = 111, Name = "Brus", Email = "brus@mail.com" },
+                //new User() {Id = 102, Name = "Vasia", Email = "vasia@mail.com" },
+                //new User() {Id = 104, Name = "Petya", Email = "petya@mail.com" },
+                //new User() {Id = 111, Name = "Brus", Email = "brus@mail.com" },
             };
 
             cbxOne.DataSource = users;
             cbxOne.DisplayMember = "Email";
             cbxOne.ValueMember = "Id";
 
+            users.Add(new User() { Id = 120, Name = "Dima", Email = "dima@mail.com" });
         }
 
         private void cbxOne_SelectedIndexChanged(object sender, EventArgs e)
